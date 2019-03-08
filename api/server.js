@@ -1,7 +1,6 @@
 const express = require("express");
 
 const gamesRouter = require("../games/gamesRouter.js");
-const games = require("../games/gamesModel.js");
 
 const server = express();
 
