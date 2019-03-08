@@ -23,4 +23,17 @@ describe("server.js", () => {
       expect(res.body).toEqual({ message: "Code me, Disney" });
     });
   });
+
+  describe("GET /api/games", () => {
+    it("should return 200 OK", async () => {
+      try {
+        const res = await request(server).get("/api/games");
+        expect(res.status).toBe(200);
+        expect(res.type).toBe("application/json");
+        await db("games").truncate();
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  });
 });

@@ -32,6 +32,6 @@
     "supertest": "^3.4.2"
   },
   "jest": {
-    "test environment": "node"
+    "testEnvironment": "node"
   }
 }
